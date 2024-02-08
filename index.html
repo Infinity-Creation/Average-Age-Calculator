@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Age calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Average Age Calculator</h1>
+    <div>
+    <input type="number" id="age1">
+    <input type="number" id="age2">
+   
+</div>
+<div>
+<button id="Calculate">Calculate</button>
+<button id="reset">Reset</button>
+</div>
+<p id="result"></p>
+ <script>
+       const age1 = document.querySelector("#age1");
+       const age2 = document.querySelector("#age2");
+       const result = document.querySelector("#result");
+       const calculator = document.querySelector("#Calculate");
+       const reset = document.querySelector("#reset");
+        calculator.addEventListener("click", function(event){
+            result.innerHTML = (Number.parseInt(age1.value) + Number.parseInt(age2.value))/2
+        })
+        reset.addEventListener("click", function(event){
+            age1.value = '';
+            age2.value = '';
+            result.innerHTML = '';
+        })
+       
+</script>   
+</body>
+</html>
